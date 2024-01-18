@@ -1,0 +1,45 @@
+html {
+    background: url(https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    font-size: 2rem;
+
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white; /* Crea el borde del reloj */
+    border-radius: 50%; /* Da forma de esfera al borde del reloj */
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 3px #efefef,
+    inset 0 0 0 10px black,
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translate(-3px);
+}
+
+.aguja {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%; /* Hace que las agujas giren desde su orígen */
+    transform: rotate(90deg); /* colocas las agujas a las 0 horas */
+    transition: all 0.05s; /* */
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* Efecto rebote natural del segundero */
+}
